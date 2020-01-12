@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>chmod calculator</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/chmod.js">	</script>
+	</head>
+
+	<body>
+	<div class="container">
+		<h1>Chmod Calculator</h1>
+		<div class="owner">
+			<h2>Owner</h2>
+
+			<div>
+				<label class="control-label"> Read</label> <input class="m" id="or" type="checkbox" onclick="cal()"> 
+			</div>
+
+			<div>
+				<label class="control-label">Write <input class="m" id="ow" type="checkbox" onclick="cal()"></label>
+			</div>
+
+			<div>
+				<label class="control-label">Execute <input class="m" id="oe" type="checkbox" onclick="cal()"></label>
+			</div>
+		</div>
+
+		<div class="group">
+			<h2>Group</h2>
+
+			<div>
+				<label class="control-label">Read <input class="m" id="gr" type="checkbox" onclick="cal()"></label>
+			</div>
+			<div>
+				<label class="control-label">Write <input class="m" id="gw" type="checkbox" onclick="cal()"></label>
+			</div>
+			<div>
+				<label class="control-label">Execute <input class="m" id="ge" type="checkbox" onclick="cal()"></label>
+			</div>
+		</div>
+
+		<div class="public">
+			<h2>Public</h2>
+
+			<div>
+				<label class="control-label">Read <input class="m" id="pr" type="checkbox" onclick="cal()"></label>
+			</div>
+
+			<div>
+				<label class="control-label">Write <input class="m" id="pw" type="checkbox" onclick="cal()"></label>
+			</div>
+
+			<div>
+				<label class="control-label">Execute <input class="m" id="pe" type="checkbox" onclick="cal()"></label>
+			</div>
+
+		</div>
+
+		<div>
+ 			<label id="result">Result:</label>
+			<div>
+				<input type="text" class="form-control input-lg m" id="oc" placeholder="0666">
+			</div>
+			<div class="col-sm-4 padding-top">
+				<input type="text" id="sym" placeholder="-rw-rw-rw-">
+			</div>
+		</div>
+	</div>
+	</body>
+
+</html>

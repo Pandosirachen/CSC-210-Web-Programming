@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> hello </title>
+</head>
+<body>
+	{% if user%}
+	<h1> Profile </h1>
+	<h2>First Name</h2>
+	<p id="fname">{{user.fname}}</p>
+
+	<h2>Last Name</h2>
+	<p id="lname"> {{user.lname}}</p>
+
+	<h2>Email</h2>
+	<p id="email"> Email Address: {{user.email}}</p>
+
+	<h2>Date of Birth</h2>
+	<p id="dob">{{user.dob}}</p>
+
+	<h2>List of friends</h2>
+	{% for friendid in friends %}
+	<a href="http://127.0.0.1:5000/raw/{{friendid}}"> {{users[friendid].lname}} {{users[friendid].fname}}</a><br>
+	{% endfor %}
+	{% else %}
+	<h1>NOT FOUND</h1>
+	{% endif %}
+</body>
+</html>
